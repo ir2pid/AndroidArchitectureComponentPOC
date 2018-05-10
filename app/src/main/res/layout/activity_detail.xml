@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noisyninja.poc.view.detail.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:onClick="done"
+            android:orientation="vertical">
+
+            <com.noisyninja.poc.view.custom.IconTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_size"
+                android:text="@string/done"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_size2" />
+
+            <com.noisyninja.poc.view.custom.IconTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_size"
+                android:onClick="done"
+                android:text="@string/done_text"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_size1" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerListDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/recyclerTextDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/loading" />
+</FrameLayout>
